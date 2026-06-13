@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+    File: index.html
+    GUI Assignment: HW4 Part 1
+    Daniyal Soharwardi
+    daniyal_soharwardi@student.uml.edu
+    Date created: June 10, 2026
+    Copyright (c) 2026 by Daniyal Soharwardi. All rights reserved. May be freely copied or
+    excerpted for educational purposes with credit to the author.
+ 
+    Description: Part 1 for the validation plugins
+ 
+    Sources:
+    https://jqueryvalidation.org/documentation/
+    https://www.w3schools.com/jquery/
+    https://stackoverflow.com/questions/8302166/dynamic-creation-of-table-with-dom
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Multiplication Table</title>
+ 
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ 
+  <!-- jquery validation -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
+ 
+  <!-- styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+ 
+  <h1>Dynamic Multiplication Table</h1>
+  <hr />
+ 
+  <h2>Please enter the table ranges</h2>
+ 
+  <!-- inputs -->
+  <form id="tableForm" novalidate>
+ 
+    <div class="field">
+      <label for="colMin">Minimum Column Value</label>
+      <input type="number" id="colMin" name="colMin" value="1" />
+    </div>
+ 
+    <div class="field">
+      <label for="colMax">Maximum Column Value</label>
+      <input type="number" id="colMax" name="colMax" value="10" />
+    </div>
+ 
+    <div class="field">
+      <label for="rowMin">Minimum Row Value</label>
+      <input type="number" id="rowMin" name="rowMin" value="1" />
+    </div>
+ 
+    <div class="field">
+      <label for="rowMax">Maximum Row Value</label>
+      <input type="number" id="rowMax" name="rowMax" value="10" />
+    </div>
+ 
+    <button type="submit" class="btn-generate">Generate Table</button>
+ 
+  </form>
+ 
+  <hr />
+ 
+  <!-- table output -->
+  <div class="table-section" id="tableSection">
+    <div class="table-meta-info" id="tableMeta"></div>
+    <div class="table-scroll" id="tableScroll"></div>
+  </div>
+ 
+  <!-- script -->
+  <script src="js/script.js"></script>
+ 
+</body>
+</html>
+ 
